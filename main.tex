@@ -1,0 +1,59 @@
+%
+% Esempio di uso della class phddiauniroma3
+% (C) 2006-2008, Franco Milicchio et al.
+%
+
+\documentclass{TesiDiaUniroma3}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{float}
+\definecolor{light-gray}{gray}{0.95}
+\usepackage{mdframed} %nice frames
+
+% --- INIZIO dati relativi al template TesiDiaUniroma3
+% dati obbligatori, necessari al frontespizio
+\titolo{Simulazione Fluidodinamica di processi di produzione additiva}
+\autore{Edoardo Costantini}
+\matricola{500130}
+\relatore{Ing. Franco Milicchio}
+\annoAccademico{2019/2020}
+\dedica{A chi non ha mai smesso di credere in me.}
+
+% --- INIZIO richiamo di pacchetti di utilità. Questi sono un esempio e non sono strettamente necessari al modello per la tesi.
+\usepackage[plainpages=false]{hyperref}	% generazione di collegamenti ipertestuali su indice e riferimenti
+\usepackage[all]{hypcap} % per far si che i link ipertestuali alle immagini puntino all'inizio delle stesse e non alla didascalia sottostante
+\usepackage{amsthm}	% per definizioni e teoremi
+\usepackage{amsmath}	% per ``cases'' environment
+\usepackage{textcomp}
+% --- FINE riachiamo di pacchetti di utilità
+
+\begin{document}
+% ----- Pagine di fronespizio, numerate in romano (i,ii,iii,iv...) (obbligatorio)
+\frontmatter
+\generaFrontespizio
+\generaDedica
+\ringraziamenti{ringraziamenti}	% inserisce i ringraziamenti e li prende in questo caso da ringraziamenti.tex
+\introduzione{introduzione}		% inserisce l'introduzione e la prende in questo caso da introduzione.tex
+\generaIndice
+\generaIndiceFigure
+
+% ----- Pagine di tesi, numerate in arabo (1,2,3,4,...) (obbligatorio)
+\mainmatter
+\capitolo{Manifattura additiva}{capitoli/capitolo1/capitolo1}
+\capitolo{Modello Matematico}{capitoli/capitolo2/capitolo2}
+\capitolo{Computazione Fluidodinamica}{capitoli/capitolo3/capitolo3}
+\capitolo{Background Tecnologico}{capitoli/capitolo4/capitolo4}
+\capitolo{Solutore Computazionale}{capitoli/capitolo5/capitolo5}
+\capitolo{Risultati}{capitoli/capitolo6/capitolo6}
+
+% ----- Parte finale della tesi (obbligatorio)
+\backmatter
+\conclusioni{conclusioni}
+
+% Bibliografia con BibTeX (obbligatoria)
+% Non si deve specificare lo stile della bibliografia
+\bibliography{bibliografia} % inserisce la bibliografia e la prende in questo caso da bibliografia.bib
+
+\end{document}

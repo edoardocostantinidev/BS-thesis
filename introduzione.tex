@@ -1,0 +1,36 @@
+Per stare al passo con la sempre più esigente richiesta dei sistemi manufatturieri moderni, vi è la necessità di introdurre nuovi processi di
+manufattura capaci di rispondere prontamente a tale richiesta. In questo contesto la manifattura additiva offre diversi vantaggi rispetto i più tradizionali
+processi. Tra questi notiamo soprattutto la capacità di realizzare complessi componenti in termini di geometrie e materiali utilizzati. Proprio questa
+libertà di operazione rende la manifattura additiva responsabile anche di un \textit{time-to-market} notevolmente ridotto. La manifattura additiva rende
+il processo di creazione dei componenti totalmente digitale, scavalcando numerosi problemi della versione più tradizionale, come per esempio
+logistica e stoccaggio delle parti necessarie. Di conseguenza i costi di una produzione basata su manifattura additiva sono relativamente ridotti
+La manifattura additiva introduce anche vantaggi in ambito riparazioni di precisioni, abbassando i costi operando direttamente su componenti danneggiati 
+senza il bisogno di sostituzioni. Si può trarre beneficio di questi vantaggi sia se si opera in ambiti di piccola produzione che di prototipazione.
+La manifattura additiva è un ambito di ricerca in rapida evoluzione poiché diversi settori traggono benefici da queste tecniche additive, tra questi ricordiamo
+il settore automobilistico, aereospaziale, e biomedico. 
+\section{Obiettivo}\label{obiettivo}
+L'obiettivo di questo progetto di tesi è quello di riuscire a simulare correttamente, dal punto di vista numerico, uno scenario di manifattura additiva
+attraverso metodo di Laser Metal Deposition. Lo scenario prevede l'emissione da parte di un ugello di particelle metalliche schermate da un gas inerte
+che previene l'ossidazione su una superficie obiettivo; con particolare interesse verso l'interazione delle particelle con il flusso di gas, in termini di temperatura e pressione, e con le pareti
+dell'ugello, in termini di deflezioni. Perseguendo questo obiettivo è stato sviluppato un simulatore numerico capace di sfruttare metodi Lagrangiani per il calcolo delle traiettorie delle particelle metalliche
+e metodi Euleriani per il calcolo delle proprietà del flusso di gas. Il simulatore sviluppato è inoltre in grado di produrre dei file interpretabili da popolari strumenti di visualizzazione
+come mostrato nel capitolo \ref*{cap:capitoli/capitolo6/capitolo6}.
+
+\section{Capitoli}\label{capitoli}
+Di seguito una breve introduzione di ogni capitolo della presente tesi.
+\paragraph{Capitolo 1.} Introduzione ad alto livello dei vari processi di manifattura additiva odierni e una vista più dettagliata
+del processo LMD oggetto di questa tesi. Questo capitolo può considerarsi una estensione dell'introduzione. 
+\paragraph{Capitolo 2.} Presentazione di alcuni concetti matematici fondamentali per la comprensione della tesi. In particolare vengono
+introdotti argomenti quali: equazioni differenziali alle derivate parziali, equazioni di Navier-Stokes, metodo degli elementi finiti, metodo Newthon-Raphson. 
+Il capitolo va inteso come una contestualizzazione e introduzione dei concetti, non vi sono quindi dimostrazioni. 
+\paragraph{Capitolo 3.} Visione del settore della CFD e dei concetti chiave che lo caratterizzano. In questo capitolo vi è anche
+un dettaglio sui metodi Lagrangiani-Euleriani utilizzati per sviluppare il solutore oggetto della tesi. Infine alcuni esempi di applicazioni comuni per 
+dove le simulazioni CFD trovano largo impiego.  
+\paragraph{Capitolo 4.} Il solutore sviluppato fa uso di svariati strumenti tecnologici che hanno influenzato, sia positivamente che non, il lavoro svolto; questo capitolo
+descrive questi strumenti e il loro utilizzo all'interno della tesi.
+\paragraph{Capitolo 5.} Il quinto capitolo contiene una descrizione dettagliata del funzionamento e dell'architettura del solutore sviluppato, oggetto della tesi.
+Vengono presentati e descritti tutti i moduli che compongono il solutore, essi sono organizzati uno per sezione. 
+\paragraph{Capitolo 6.} Questo capitolo espone i risultati raggiunti con il solutore implementato, fornendo diverse figure e render descrittive di quanto è stato fatto.
+I risultati sono raggruppati per area di interesse e infine mostrati nel loro insieme.
+\paragraph{Capitolo 7.} Il capitolo conclusivo descrive brevemente ciò che è stato raggiunto. Vengono inoltre discussi alcuni
+futuri sviluppi riguardo il progetto svolto.

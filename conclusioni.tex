@@ -1,0 +1,18 @@
+Questo progetto di tesi ha visto la nascita di un nuovo tipo di solutore specializzato nella simulazione di processi LMD che utilizza una combinazione
+di metodi, Lagrangiano e Euleriano, per predire il movimento di un flusso di particelle metalliche. Nonostante i risultati in grado di computare adesso
+sono numericamente corretti vi sono ancora alcune funzionalità la cui implementazione aumenterebbe certamente il valore del simulatore.
+Una fra queste sicuramente è l'introduzione di ulteriori algoritmi di parallelizzazioni per garantire tempi di simulazione ancora più bassi. 
+\section{Ulteriori parallelizzazioni}\label{DistribuzioneTriangulation}
+Al momento viene utilizzato un approccio ibrido per quanto riguarda la distribuzione del carico di lavoro della simulazione su più processi.
+In particolare nella fase di computazione Euleriana dei flussi viene impiegato un algoritmo di parallelizzazione di calcolo (\ref*{parallelizzazione}).
+Dealii, però, offre diversi strumenti per parallelizzare efficentemente ulteriori carichi di lavoro, tra questi c'è la possibilità di distribuire la 
+mesh, tramite l'oggetto \texttt{parallel::distributed::Triangulation< dim, spacedim >} (\ref*{mesh}) su più calcolatori per permettere di parallelizzare 
+le operazioni di costruzione o suddivisione nel caso di mesh molto risolute \cite{BBHK11}.
+
+Un altro spunto che vale la pena considerare è quello di parallelizzare il metodo Lagrangiano responsabile per la computazione del flusso di particelle metalliche.
+Questo tipo di processo accoppiato ad alcuni algoritmi accennati nella sezione \ref*{tbb}, offerti dalla libreria Intel TBB, potrebbero ridurre drasticamente i tempi di calcolo.
+Quest'implementazione certamente richiederebbe uno sforzo implementativo considerevole in quanto ogni struttura dati andrebbe correttamente gestita per evitare race-condition e thread-lock.
+
+Infine il simulatore gioverebbe sicuramente da un interfaccia grafica capace di gestire correttamente i vari file di input e parametri, cosi da semplificare un futuro utilizzo
+che al momento risulta piuttosto ostico a chi non ha partecipato allo sviluppo. Si potrebbe realizzare un semplice wrapper che organizza i file e gestisce l'esecuzione del simulatore
+in maniera autonoma.
